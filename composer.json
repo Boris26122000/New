@@ -1,0 +1,20 @@
+{
+    "name": "boris/session-log-in",
+    "description": "MVC",
+    "type": "project",
+    "require": {
+        "monolog/monolog": "^2.0",
+        "phpunit/phpunit": "^8.5",
+        "swiftmailer/swiftmailer": "^6.0",
+        "ext-pdo": "*"
+    },
+    "authors": [
+        {
+            "name": "Boris2000",
+            "email": "kolomoietsboris@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"MVC\\": "/"}
+    }
+}

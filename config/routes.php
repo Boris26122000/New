@@ -1,8 +1,12 @@
 <?php
 return [
-    'news/([0-9]+)' => 'news/view/$1',
-    'news' => 'news/index',
-    '' => 'site/index'
+    'single' => 'single/view',
+    'login' => 'login/checkUserForLogin',
+    'registration/tryRegistration' => 'registration/tryRegistration/',
+    'registration' => 'registration/view/',
+    'basket' => 'basket/view/',
+    '^$' => 'site/index'
+
    //'news/([0-9]+)' => 'news/view',
    // 'news' => 'news/index',
 ];

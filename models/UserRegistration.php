@@ -1,25 +1,22 @@
 <?php
-namespace models\Registration;
 use MVC\Components\Sessions;
 
 
 class UserRegistration
 {
-    private $firstName;
-    private $lastName;
-    private $email;
-    private $password;
 
     public function __construct()
     {
-        if($_POST['password'] !== $_POST['password1']){
+        if ($_POST['password'] !== $_POST['password1']) {
             echo "passwords are not equal";
-        }else {
+        } else {
             $this->firstName = $_POST['firstname'];
             $this->lastName = $_POST['lastname'];
             $this->email = $_POST['email'];
             $this->password = $_POST['password'];
         }
+        //echo "fgvfdxcfghytredsssssssssssssssssssssssssssssssssssss";
+        var_dump($this);
     }
     public function Registration(){
         $user = new Sessions\Sessions();

@@ -27,6 +27,8 @@ class Router
             if(preg_match("~$uriPattern~", $uri)) {
                 $internalRoute = preg_replace("~$uriPattern~", $path, $uri);
                 $segments = explode('/', $internalRoute);
+/*                var_dump($this->routes);
+                var_dump($segments);*/
                 $controllerName = array_shift($segments).'Controller';
                 $controllerName = ucfirst($controllerName);
 
@@ -40,6 +42,7 @@ class Router
                 }
 
                 $controllerObject = new $controllerName;
+//                var_dump($actionName);
                 $result = call_user_func_array(array($controllerObject, $actionName), $parameters);
                 if($result != NULL)
                 {

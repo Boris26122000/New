@@ -8,6 +8,7 @@ public static function getConnection()
     $dsn = "mysql:host={$params['host']};dbname={$params['dbname']}";
     try {
         $db = new PDO($dsn, $params['user'], $params['password']);
+ /*       $db-exec('set names utf-8');*/
     } catch (PDOException $e) {
         echo 'Подключение не удалось: ' . $e->getMessage();
     }

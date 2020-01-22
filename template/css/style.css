@@ -23,6 +23,23 @@ h1,h2,h3,h4,h5,h6,label,p{
 	margin:0;	
 }
 /*----*/
+.addCart{
+	display: block;
+	margin: 7px  auto;
+	background: orange;
+	border-radius: 5px;
+	width: 90px;
+	height: 25px;
+}
+.addCart:hover{
+	background: orangered;
+}
+.addCart p{
+	text-align: center;
+	padding-top: 6px;
+	font-weight: bold;
+}
+
 .itemContainer{
 			width:100%;
 			float:left;
@@ -79,6 +96,7 @@ a.item_add {
 /*----*/
 .header {
   border-bottom: 1px solid #000;
+	background-repeat: no-repeat;
 }
 .header-top{
 	background: #000;
@@ -2375,4 +2393,18 @@ a.item_add p.number {
 .top-in2 {
   min-height: 81px;
 }
+.login{
+	color: black;
+}
+	input:valid {
+		border-color: green;
+	}
+
+	input:invalid {
+		border-color: red;
+	}
+.price{
+	text-align: center;
+}
+
 }

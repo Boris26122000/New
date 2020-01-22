@@ -1,4 +1,4 @@
-<?php include_once ROOT . '/views/header/header.php';?>
+<?php include_once ROOT . 'views/header/header.php';?>
 <!--content-->
 <div class="blog">
 <div class="container">

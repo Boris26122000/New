@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+$(document).ready(function($){
 	var tabItems = $('.cd-tabs-navigation a'),
 		tabContentWrapper = $('.cd-tabs-content');
 

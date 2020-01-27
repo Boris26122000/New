@@ -7,7 +7,7 @@ class Swift_Encoder_QpEncoderAcceptanceTest extends \PHPUnit\Framework\TestCase
 
     protected function setUp()
     {
-        $this->samplesDir = realpath(__DIR__ . '/../../../_samples/charsets');
+        $this->samplesDir = realpath(__DIR__.'/../../../_samples/charsets');
         $this->factory = new Swift_CharacterReaderFactory_SimpleCharacterReaderFactory();
     }
 

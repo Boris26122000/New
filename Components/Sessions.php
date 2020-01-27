@@ -1,6 +1,5 @@
 <?php
-namespace MVC\Components\Sessions;
-use Exception;
+
 
 class Sessions
 {
@@ -34,16 +33,18 @@ class Sessions
     {
         $this->start();
         $_SESSION[$key] = $val;
+        return true;
     }
 
     public function getSession($key)
     {
-        $this->start();
+//        $this->start();
         return (!empty($_SESSION[$key])) ? $_SESSION[$key]: false;
     }
 
     public function delete($key)
     {
         $_SESSION[$key] = '';
+        return true;
     }
 }

@@ -16,7 +16,6 @@ class NewsController
     public function actionView($id = 1)
     {
 
-        echo 1111111111111111111111111111111;
        /* if($id)
         {
             $new = new News();

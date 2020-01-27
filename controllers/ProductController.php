@@ -1,9 +1,12 @@
 <?php
+
+
 class ProductController
 {
-    public function actionList()
+    public function actionView($productId)
     {
-        echo "ProductController actionList";
+        $product = Product::getProductById($productId);
+        require_once ROOT . '/views/products/view.php';
         return true;
     }
 }

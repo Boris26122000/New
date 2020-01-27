@@ -7,21 +7,21 @@ $categories = Category::getCategoryList();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>New Store A Ecommerce Category Flat Bootstarp Resposive Website Template | Blog_Single :: w3layouts</title>
-    <link href="template/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+    <title>New Store A Ecommerce</title>
+    <link href="/template/css/bootstrap.css" rel="stylesheet" type="text/css">
+<!--    <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css" type="text/css">-->
 
     <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="template/css/style.css" rel="stylesheet">
-    <link href="template/css/flexslider.css" rel="stylesheet">
+    <link href="/template/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/template/css/ftlexslider.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="keywords" content="New Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900'>
-    <link href="template/css/memenu.css" rel="stylesheet">
+    <link href="/template/css/memenu.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <!--            модальное окно-->
@@ -71,6 +71,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </li>
 
                 </ul>
+                <input type="button" class="showCart">
                 <div class="cart box_1">
                     <a href="/basket">
                         <h3> <div class="total">
@@ -95,14 +96,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class=" h_menu4">
                 <ul class="memenu skyblue">
                     <li class="active grid"><a class="color8" href="/">Home</a></li>
-                    <li><a class="color1" href="#">Shop</a>
+                    <li><a class="color1" href="/catalog">Shop</a>
                         <div class="mepanel">
                             <div class="row">
                                 <div class="col1">
                                     <div class="h_nav">
                                         <ul>
                                               <?php foreach($categories as $category){?>
-                                                <li><a href="/category/<?= $category['id']?>.php"><?= $category['categoryName']?></a></li>
+                                                <li><a href="/category/<?= $category['id']?>"><?= $category['categoryName']?></a></li>
                                               <?php }?>
                                         </ul>
                                     </div>

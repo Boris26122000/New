@@ -732,7 +732,7 @@ final class Iconv
 
     private static function getData($file)
     {
-        if (file_exists($file = __DIR__ . '/Resources/charset/' .$file.'.php')) {
+        if (file_exists($file = __DIR__.'/Resources/charset/'.$file.'.php')) {
             return require $file;
         }
 

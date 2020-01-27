@@ -1,4 +1,7 @@
 <?php
+
+
+
 class Product
 {
     const SHOW_LIMIT = 8;
@@ -10,7 +13,7 @@ class Product
         $db = DB::getConnection();
 
         $productList = [];
-        $result = $db->query('SELECT id,name,price,image,code FROM product');
+        $result = $db->query('SELECT id,name,price,image,code FROM product LIMIT'. $count);
 
         $i=0;
         while ($row = $result->fetch()){
@@ -22,6 +25,41 @@ class Product
             $i++;
         }
         return $productList;
+
+    }
+
+    public static  function getProductsListByCategory($categoryId = false)
+    {
+        if ($categoryId) {
+            $db = DB::getConnection();
+            $products = [];
+            $result = $db->query("SELECT id,name,price,image FROM product 
+                                    WHERE category_id = '{$categoryId}' ");
+
+            $i = 0;
+            while ($row = $result->fetch()) {
+                $products[$i]['id'] = $row['id'];
+                $products[$i]['name'] = $row['name'];
+                $products[$i]['price'] = $row['price'];
+                $products[$i]['image'] = $row['image'];
+                $i++;
+            }
+            return $products;
+        }
+    }
+
+    public static function getProductById($productId)
+    {
+        $productId = intval($productId);
+
+        if($productId){
+            $db = DB::getConnection();
+            $result = $db->query("SELECT * FROM product WHERE id = " . $productId);
+            $result->setFetchMode(PDO::FETCH_ASSOC);
+
+            return $result->fetch();
+        }
+
 
     }
 

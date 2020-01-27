@@ -1,12 +1,3 @@
-$('#exampleModal').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget) // Button that triggered the modal
-    var recipient = button.data('whatever') // Extract info from data-* attributes
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    var modal = $(this)
-    modal.find('.modal-title').text('New message to ' + recipient)
-    modal.find('.modal-body input').val(recipient)
-})
 $(document).ready(function(c) {
     $('.close1').on('click', function(c){
         $('.cart-header').fadeOut('slow', function(c){
@@ -19,29 +10,28 @@ $(document).ready(function(c) {
         });
     });
 });
-// jQuery.validator.setDefaults({
-//     debug: true,
-//     success: "valid"
-// });
-// $( "#myform" ).validate({
-//     rules: {
-//         exampleInputEmail1: {
-//             required: true,
-//             email: true
-//         },
-//         exampleInputPassword1: {
-//             required: true,
-//             password: true
-//         }
+// /*        jQuery.validator.setDefaults({
+//             debug: true,
+//             success: "valid"
+//         });
+//         $( "#myform" ).validate({
+//             rules: {
+//                 exampleInputEmail1: {
+//                     required: true,
+//                     email: true
+//                 },
+//                 exampleInputPassword1: {
+//                     required: true,
+//                     password: true
+//                 }
 //
-//     }
-// });
+//             }
+//         });*/
+
         $( ".login" ).on( "click", function() {
         let email = $('#exampleInputEmail1').val();
-        console.log(email);
         let password = $('#exampleInputPassword1').val();
-            console.log(password);
-        $.ajax ({
+        $.ajax({
             url: "/login",
             type:'POST',
             data: {
@@ -49,10 +39,7 @@ $(document).ready(function(c) {
                 userPassword: password,
             },
             success: function(data){
-                console.log(alert(data));
-                // $.ajax({
-                    // url:,
-                // });
+
             },
             error: function() {
                 alert("Error");
@@ -69,18 +56,19 @@ $(document).ready(function(c) {
         return false;
     }
 
-    //$(itemBox).click(addToLocal());
-    $('.addCart').on('click', e => {
-        count++;
+    var ItemIdArr = [];
+    $('.addCart').on('click', e =>{
         var cartData = getCartData() || {},
+            // i = 0;
         ItemId = e.target.dataset.id,
         ItemName = e.target.dataset.name,
         ItemPrice = e.target.dataset.price;
-        //cartData[ItemId] = [ItemName, ItemPrice, 1];
         if(cartData.hasOwnProperty(ItemId)){
             cartData[ItemId][2] += 1;
         } else {
             cartData[ItemId] = [ItemName, ItemPrice, 1];
+
+            ItemIdArr.push(ItemId);
         }
         setCartData(cartData);
         return false;
@@ -91,3 +79,9 @@ $(document).ready(function(c) {
         localStorage.clear();
     });
 
+    $('.showCart').on('click', () =>{
+        // for(let i= 0;i<ItemIdArr.length; i++) {
+            console.log(ItemIdArr);
+            //console.log(JSON.parse(localStorage.getItem('cart'))[ItemIdArr][i]);
+        // }
+    });

@@ -14,7 +14,7 @@ class Swift_Signers_SMimeSignerTest extends \PHPUnit\Framework\TestCase
         $this->replacementFactory = Swift_DependencyContainer::getInstance()
             ->lookup('transport.replacementfactory');
 
-        $this->samplesDir = str_replace('\\', '/', realpath(__DIR__ . '/../../../_samples/')).'/';
+        $this->samplesDir = str_replace('\\', '/', realpath(__DIR__.'/../../../_samples/')).'/';
     }
 
     public function testUnSignedMessage()

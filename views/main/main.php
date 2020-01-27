@@ -5,12 +5,12 @@ require ROOT . '/views/header/header.php';
 <div class="content">
     <div class="container">
         <div class="content-top">
-            <h1>NEW RELEASED</h1>
+            <h1>Main page</h1>
             <div class="grid-in">
                 <?php
                 foreach($latestProducts as $AllProducts) {?>
                     <div class="col-md-4 grid-top">
-                        <a href="/single" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive"
+                        <a href="/product/<?= $AllProducts['id']?>" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive"
                                                                                                         src="../images/pi.jpg" alt="">
                             <div class="b-wrapper">
                                 <h3 class="b-animate b-from-left    b-delay03 ">
@@ -18,7 +18,7 @@ require ROOT . '/views/header/header.php';
                                 </h3>
                             </div>
                         </a>
-                        <a><div data-id="<?= $AllProducts['code']?>" data-name="<?= $AllProducts['name']?>" data-price="<?= $AllProducts['price']?>" class="addCart">Add To Cart</div></a>
+                        <a><div data-id="<?= $AllProducts['id']?>" data-name="<?= $AllProducts['name']?>" data-price="<?= $AllProducts['price']?>" class="addCart">Add To Cart</div></a>
                         <p class="price"><?= $AllProducts['price']?></p>
                         <p class="name"><a href="/single"><?= $AllProducts['name']?></a></p>
                     </div>

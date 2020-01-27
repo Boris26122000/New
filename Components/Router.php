@@ -1,4 +1,5 @@
 <?php
+
 class Router
 {
     private $routes;
@@ -31,9 +32,7 @@ class Router
                 var_dump($segments);*/
                 $controllerName = array_shift($segments).'Controller';
                 $controllerName = ucfirst($controllerName);
-
                 $actionName = 'action'.ucfirst(array_shift($segments));
-
                 $parameters = $segments;
                 //var_dump($parameters);
                 $controllerFile = ROOT.'/controllers/'.$controllerName.'.php';

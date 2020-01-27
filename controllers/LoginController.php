@@ -10,17 +10,17 @@ class LoginController
         $userPassword = password_hash($_POST['userPassword'],PASSWORD_DEFAULT);
         $userSession = new Sessions();
         $userLogin = new Login();
-        var_dump($userLogin->CheckUser($userEmail,$userPassword));
-/*        if(!($userSession->getSession($userEmail))){
-            if($userLogin->CheckUser($userEmail,$userPassword)){
+        if(!($userSession->getSession($userEmail))){
+            if(!($userLogin->CheckUser($userEmail,$userPassword))){
                 $userSession->setSession($userEmail,$userPassword);
-                return "User with email: ". $userEmail ."have been authed successfully";
+                echo json_encode("User with email: ". $userEmail ."have been authed successfully");
             }else {
-                return "Unknown user with Email". $userEmail;
+                echo json_encode("Unknown user with Email". $userEmail);
             }
         }else{
-            return "You are already authed";
-        }*/
+            echo json_encode("You are already authed");
+
+        }
 
 
 

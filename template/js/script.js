@@ -39,6 +39,7 @@ $(document).ready(function(c) {
                 userPassword: password,
             },
             success: function(data){
+                alert(data);
 
             },
             error: function() {

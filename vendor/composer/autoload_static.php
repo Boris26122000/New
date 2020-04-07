@@ -21,6 +21,10 @@ class ComposerStaticInit0f4e7889f745fbd8fd535683201abd8c
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'a' => 
+        array (
+            'app\\' => 4,
+        ),
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
@@ -41,7 +45,6 @@ class ComposerStaticInit0f4e7889f745fbd8fd535683201abd8c
         'M' => 
         array (
             'Monolog\\' => 8,
-            'MVC\\' => 4,
         ),
         'E' => 
         array (
@@ -61,6 +64,10 @@ class ComposerStaticInit0f4e7889f745fbd8fd535683201abd8c
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'app\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -97,10 +104,6 @@ class ComposerStaticInit0f4e7889f745fbd8fd535683201abd8c
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
-        ),
-        'MVC\\' => 
-        array (
-            0 => '/',
         ),
         'Egulias\\EmailValidator\\' => 
         array (

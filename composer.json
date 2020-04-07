@@ -1,5 +1,5 @@
 {
-    "name": "boris/session-log-in",
+    "name": "mvc/mvc",
     "description": "MVC",
     "type": "project",
     "require": {
@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "MVC\\": "/"
+            "app\\": "app/"
         }
     }
 }
